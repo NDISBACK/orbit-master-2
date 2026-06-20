@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6c6y4nxmls2a"
+path="res://.godot/imported/Powerful Massive And Dramatic Neo Classical Violin Music - The Demand of Man.mp3-f2670ddd431092288ac5d4dd80115bf1.mp3str"
+
+[deps]
+
+source_file="res://Assets/Powerful Massive And Dramatic Neo Classical Violin Music - The Demand of Man.mp3"
+dest_files=["res://.godot/imported/Powerful Massive And Dramatic Neo Classical Violin Music - The Demand of Man.mp3-f2670ddd431092288ac5d4dd80115bf1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

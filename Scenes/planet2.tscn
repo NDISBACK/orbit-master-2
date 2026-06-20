@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://v8sgkh3gvb7n"]
+
+[ext_resource type="Script" uid="uid://ca546uc74ebf6" path="res://Scripts/planet.gd" id="1_llngb"]
+[ext_resource type="Texture2D" uid="uid://cuehsvkmf47tc" path="res://Assets/planets (1)/planet_02.png" id="2_llngb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v7j2d"]
+radius = 318.1572
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_detw4"]
+atlas = ExtResource("2_llngb")
+region = Rect2(0, 0, 450, 450)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pw3an"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_detw4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=1840927668]
+z_as_relative = false
+scale = Vector2(0.55, 0.55)
+script = ExtResource("1_llngb")
+planet_mass = 1000000000000.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=808877015]
+shape = SubResource("CircleShape2D_v7j2d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=315575718]
+sprite_frames = SubResource("SpriteFrames_pw3an")

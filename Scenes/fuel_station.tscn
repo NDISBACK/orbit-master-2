@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bmr3ht0k00hso"]
+
+[ext_resource type="Script" uid="uid://dctp7207xq2v7" path="res://Scripts/fuel_station.gd" id="1_7vplh"]
+[ext_resource type="Texture2D" uid="uid://bpenpwbid65qo" path="res://Assets/SpaceShooterRedux/PNG/ufoBlue.png" id="2_b80r1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tg7v2"]
+radius = 41.19466
+
+[node name="Area2D" type="Area2D" unique_id=943683528]
+script = ExtResource("1_7vplh")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1261872237]
+texture = ExtResource("2_b80r1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=239254995]
+shape = SubResource("CircleShape2D_tg7v2")

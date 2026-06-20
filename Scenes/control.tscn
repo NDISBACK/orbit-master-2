@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://bhlimhsx2kx58"]
+
+[ext_resource type="Script" uid="uid://l6e1n3iou7fv" path="res://Scripts/mainmenu.gd" id="1_sjmnu"]
+
+[node name="Control" type="Control" unique_id=1136816031]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sjmnu")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1092159347]
+layout_mode = 0
+offset_right = 1144.0
+offset_bottom = 655.0
+color = Color(4.042983e-06, 0.49997705, 0.50040007, 1)
+
+[node name="Title" type="Label" parent="." unique_id=1296896399]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 105.0
+offset_right = 1003.0
+offset_bottom = 311.0
+scale = Vector2(5, 5)
+text = "Orbit Master"
+
+[node name="Play" type="Button" parent="." unique_id=653801792]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 268.0
+offset_right = 710.0
+offset_bottom = 376.96
+scale = Vector2(1.13, 1.13)
+text = "Play"
+
+[node name="Label" type="Label" parent="." unique_id=329733603]
+layout_mode = 0
+offset_left = 226.00002
+offset_top = 473.00003
+offset_right = 1372.0
+offset_bottom = 643.0
+scale = Vector2(2.77, 2.77)
+text = "Fight against time and gravity"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

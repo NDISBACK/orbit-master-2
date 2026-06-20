@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dqtlfh0j8w45o"]
+
+[ext_resource type="Texture2D" uid="uid://dlhoyntpx0qo5" path="res://Assets/image_processing20250414-2-i4v95o.jpg" id="1_sn1xx"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" unique_id=923405754]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=1698859079]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=242238654]
+texture = ExtResource("1_sn1xx")

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ced2fquern6nm"]
+
+[ext_resource type="Script" uid="uid://t6vmrmorxl72" path="res://Scripts/main_ship.gd" id="1_6ltwf"]
+[ext_resource type="Texture2D" uid="uid://dnwnoyp5sd7ce" path="res://Assets/SpaceShooterRedux/PNG/playerShip2_blue.png" id="1_cvls2"]
+[ext_resource type="PackedScene" uid="uid://b8b4wbxxujfol" path="res://Scenes/star points.tscn" id="2_dgnva"]
+[ext_resource type="Script" uid="uid://baljaxo6pp6t0" path="res://Scripts/camera.gd" id="3_vtlm8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ltwf"]
+atlas = ExtResource("1_cvls2")
+region = Rect2(0, 0, 112, 75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vtlm8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ltwf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgnva"]
+radius = 29.017237
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=566437135]
+z_index = 10
+gravity_scale = 0.0
+linear_damp = 0.05
+angular_damp = 8.0
+script = ExtResource("1_6ltwf")
+crystal_scene = ExtResource("2_dgnva")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=722228332]
+sprite_frames = SubResource("SpriteFrames_vtlm8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1575419907]
+position = Vector2(0, 9)
+shape = SubResource("CircleShape2D_dgnva")
+
+[node name="TrajectoryLine" type="Line2D" parent="." unique_id=1325665500]
+z_index = 100
+default_color = Color(0.59607846, 1, 0.33333334, 1)
+joint_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=924686245]
+position = Vector2(218.14, 0)
+zoom = Vector2(0.67, 0.67)
+script = ExtResource("3_vtlm8")
