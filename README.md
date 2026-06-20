@@ -90,3 +90,7 @@ Can you find the fastest route, use the least fuel, and achieve the best time?
 There is only one way to find out.
 
 Launch and begin your mission.
+
+## AI usage
+
+AI has been used in this project to assist with debugging of the code as well as the formatting and some parts of writing of DEVLOGS and this readme file.
